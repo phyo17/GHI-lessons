@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	// 	function calculateAge(yearOfbirth){
+	// 		var age = 2020-yearOfbirth;
+	// 		//console.log(age);
+	// 		return age;
+	// }
+	// //calculateAge(2000);
+	// //console.log(calculateAge(2000));
+
+	// function retireAge(dateOfBirth){
+
+	// 	var resultAge=calculateAge(dateOfBirth);
+	// 	return 60-resultAge;
+	// }
+	// console.log(retireAge(2000));
+	
+	function calculateAge(yearOfbirth){
+			return 2020-yearOfbirth;
+	}
+	function retireAge(dateOfBirth,fullName){
+		var resultAge = calculateAge(dateOfBirth);
+		var retireAge = 60-resultAge;
+		if(retireAge > 0){
+			console.log(fullName+' is '+resultAge+' years old ' , fullName+' will retire in next '+retireAge+' years ');
+		}else if (retireAge ==0){
+			console.log(fullName+' is '+resultAge+' years old ' , fullName+' will retire in next this year ');
+		}else{
+			console.log(fullName+' is '+resultAge+' years old ' , fullName+' had been retired ');
+		}
+	}
+	retireAge(2000,'U Thant');
+	retireAge(1945,'U Nyi');
+	retireAge(1970,'U Aung San');
+
+	function transferAge(dateOfBirth,fullName){
+		var resultAge=calculateAge(dateOfBirth);
+		var transferAge=40-resultAge;
+		console.log(transferAge);
+	}
+	transferAge(2005);
+
+	var calculateAge1=function(yearOfbirth){
+		return 2020-yearOfbirth;
+	}
+	var resultAge=calculateAge1(1995);
+	console.log(resultAge);
+
+	var department = function(hobby){
+		switch(hobby){
+			case "WebDevelopment":
+				//console.log('Go to Web department');
+				//break;
+				return 'Go to Web department';
+			case "IotDevelopment":
+				//console.log('Go to Iot department');
+				//break;
+				return 'Go to Iot department';
+			
+			case "RobotDevelopment":
+				//console.log('Go to Robot department');
+				//break;
+				return 'Go to Robot department';
+			default:
+				console.log('Choose the department');
+		}
+	}
+	console.log(department('IotDevelopment'));
+	
+	</script>
+</body>
+</html>

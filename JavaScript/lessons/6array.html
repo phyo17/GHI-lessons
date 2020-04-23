@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr1 = ['mgmg','agag','koko'];
+			console.log(arr1,typeof arr1);
+			console.log(arr1[0]);
+			console.log(arr1[1]);
+			console.log(arr1[2]);
+
+		var arr2 = new Array(20,25,30,45);
+			console.log(arr2[0]);
+			console.log(arr2[1]);
+			console.log(arr2.length);
+			arr2.push(50);
+			console.log(arr2);
+			arr2.pop();
+			console.log(arr2);
+			arr2.unshift(15);
+			console.log(arr2);
+			arr2.shift();
+			console.log(arr2);
+			console.log(arr2.indexOf(arr2[2]));
+			console.log(arr2.indexOf(30));
+			console.log(arr2.indexOf(70));
+			console.log(arr2);
+			arr2[arr2.length]=91;
+			arr2[9]=89;
+			console.log(arr2);
+
+			var age=13;
+
+			age<18 ? console.log('You can drink only juice') : console.log('You can drink alcohol');
+
+			arr2.indexOf(72)==-1 ? console.log('72 is not in array') : console.log('72 is in array');
+
+			var checking = arr2.indexOf(99)==-1 ? ('99 is not in array') : ('99 is in array');
+
+			console.log(checking);
+
+	</script>
+</body>
+</html>

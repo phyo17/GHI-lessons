@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		let mgmg={
+			name:"Mg Mg",
+			age:20,
+			job:"designer",
+			presentation:function(style,timeOfDay){
+				if(style==="formal"){
+					console.log("Good "+timeOfDay+" Ladies and Gentlemen. I'm "+this.name+". I'm a "+this.job+" and I'm "+this.age+"years old");
+				}else if (style==="friendly") {
+					console.log("Hey What's up? I'm "+this.name+" I'm a "+this.job+" and I'm "+this.age+" years old. Have a nice "+timeOfDay+".");
+				}
+			}
+		};
+		mgmg.presentation("formal","morning");
+		let agag={
+			name:"agag",
+			age:25,
+			job:"developer"
+		};
+		mgmg.presentation.call(agag,"formal","afternoon");
+		mgmg.presentation.apply(agag, ["friendly","evening"]);
+		var mgmg1=mgmg.presentation.bind(mgmg,"friendly");
+		mgmg1("day");
+		mgmg1("night");
+	</script>
+</body>
+</html>

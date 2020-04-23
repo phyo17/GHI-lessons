@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		
+		// var a = 20;
+		// function hello(){
+		// 	console.log(this);
+		// 	console.log(this.a);
+		// }
+		// hello();
+		// var hi = function(){
+		// 	console.log(this);
+		// 	console.log(this.a);
+		// }
+		// hi();
+
+		// var obj = {
+		// 	a:30,
+		// 	hello:function(){
+		// 		console.log(this);
+		// 		console.log(this.a);
+		// 	}
+		// }
+		// obj.hello();
+		
+
+		var mgmg = {
+			name : 'mgmg',
+			yearOfBirth : 1987,
+			calculateAge : function(){
+				console.log(this);
+				console.log(2019-this.yearOfBirth);
+				function innerFunction(){
+					console.log(this);
+				}
+				innerFunction();
+			}
+		}
+		mgmg.calculateAge();
+
+	</script>
+</body>
+</html>

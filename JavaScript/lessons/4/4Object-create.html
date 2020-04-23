@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Object Lessons</title>
+</head>
+<body>
+	<h1>Hello Object</h1>
+	<script>
+		var protoObject={
+			calcAge:function(){
+				return 2020-this.dateOfBirth;
+			}
+		}
+		var mgmg=Object.create(protoObject,{
+			name:{value:'mgmg'},
+			dateOfBirth:{value:2000},
+			job:{value:'developer'}
+		});
+		// var mgmg=Object.create(protoObject);
+		// mgmg.name='mgmg';
+		// mgmg.dateOfBirth=2000;
+		// mgmg.job='developer';
+		console.log(mgmg);
+		console.log(mgmg.calcAge());
+	</script>
+</body>
+</html>

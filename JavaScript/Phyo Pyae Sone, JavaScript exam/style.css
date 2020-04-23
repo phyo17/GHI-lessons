@@ -1,0 +1,19 @@
+*{
+	margin:0;
+	padding: 0;
+}
+.Ninja_Quiz{
+	box-sizing: border-box;
+	padding: 20px;
+	width: 100%;
+	color: white;
+	background-color: black;
+	height: 300px;
+}
+.Quest{
+	box-sizing: border-box;
+	padding: 20px;
+	width: 100%;
+	color: white;
+	background-color: red;
+}

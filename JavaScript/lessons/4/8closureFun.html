@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function retirement(retirementAge){
+			var a=" years left until retirement";
+			return function(yearOfBirth){
+				var age=2020-yearOfBirth;
+				console.log(retirementAge-age+a);
+			}
+		}
+		// var retire=retirement(60);
+		// var retireLeft=retire(1990);
+		// retireLeft;
+		
+		retirement(60)(1990);
+	</script>
+</body>
+</html>

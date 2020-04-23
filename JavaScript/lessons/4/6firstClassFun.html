@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//First class function as Argument
+		let dateOfBirth=[1990,1995,2000,2005];
+		function calcAge(dob){
+			return 2020-dob;
+		}
+		function arrCalc(arr,fn){
+			let resArr=[];
+			for(let i=0; i<arr.length;i++){
+				resArr.push(fn(arr[i]));
+			}
+			return resArr;
+		}
+		let age=arrCalc(dateOfBirth,calcAge); // age
+		console.log(age);
+
+		
+		function checkAge(age){	// checkAge
+			return age>=18;
+		}
+		let cAge=arrCalc(age,checkAge);
+		console.log(cAge);
+
+		
+		function maxHeartRate(age){ 	// maxHeartRate
+			if(age>=18 && age<=81){
+				return Math.round(206.9-0.67*age);
+			}else{
+				return -1;
+			}
+		}
+		let mHeartRate=arrCalc(age,maxHeartRate);
+		console.log(mHeartRate);
+
+		//First class function as return 
+		function interviewQuestion(job){
+			if(job=="designer"){
+				return function(name){
+					return "Hello "+name+"! What about UI and UX ";
+				};
+			}else if(job=="developer"){
+				return function(name){
+					return "Hello "+name+"! Which language do you prefer? ";
+				};
+			}else{
+				return function(name){
+					return "Hello "+name+"! What do you do? ";
+				};
+			}
+		}
+		var iq=interviewQuestion();
+		var iqr=iq("Mg Mg");
+		console.log(iqr);
+		console.log(interviewQuestion("developer")("Ag Ag"));
+		console.log(interviewQuestion("designer")("Mg Mg"));
+		console.log(interviewQuestion("")("Chit Chit"));
+	</script>
+</body>
+</html>

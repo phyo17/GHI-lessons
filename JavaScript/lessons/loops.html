@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// var students = ['mgmg','koko','aungaung','welcome','naing','sweety','nice','wah','chitchit','mama'];
+		// for(var i = 0; i < students.length; i++){
+		// 	console.log('students '+i+' is '+students[i]);
+		// }
+		// var arr = students.length ;
+
+		// while(arr>=0){
+		// 	console.log('students '+arr+' is '+students[arr]);
+		// 	arr--;
+		// }
+		
+		// var students = ['mgmg','koko','aungaung',2020,'naing','sweety','nice',false,'chitchit','mama'];
+		// for(var i = 0; i < students.length; i++){
+		// 	if(typeof students[i]!='string'){
+		// 		break;
+		// 	}
+		// 	console.log('students '+i+' is '+students[i]);
+		//    }
+		
+		var family1 = {
+			name : 'agag',
+			bill : [32000,15000,170000,82000,4800],
+			calTip : function(){
+					this.tipMoney=[];
+					this.cost=[];
+				for (var i=0; i<this.bill.length; i++){
+					var percentage;
+					var bill = this.bill[i];
+					if(bill<30000){
+						percentage = 0.2;
+					}else if(bill>=30000 && bill<100000){
+						percentage = 0.15;
+					}else if(bill>100000){
+						percentage = 0.1;
+					}
+					this.tipMoney[i] = bill * percentage;
+					this.cost[i] = bill + this.tipMoney[i];
+				}
+			}
+		};
+		family1.calTip();
+		console.log(family1.tipMoney);
+		console.log(family1.cost);	
+
+		function avg(tip){
+			var sum = 0;
+			for(var i=0; i<tip.length; i++){
+				sum += tip[i];
+			}
+			return sum/tip.length;
+		}
+		console.log(avg(family1.tipMoney));
+
+
+		var family2 = {
+			name : 'hlahla',
+			bill : [],
+			calTip : function(){
+					this.tipMoney=[];
+					this.cost=[];
+				for (var i=0; i<this.bill.length; i++){
+					var percentage;
+					var bill = this.bill[i];
+					if(bill<30000){
+						percentage = 0.2;
+					}else if(bill>=30000 && bill<100000){
+						percentage = 0.15;
+					}else if(bill>100000){
+						percentage = 0.1;
+					}
+					this.tipMoney[i] = bill * percentage;
+					this.cost[i] = bill + this.tipMoney[i];
+				}
+			}
+		};
+		family2.calTip();
+		console.log(family2.tipMoney);
+		console.log(family2.cost);	
+
+		function avg1(tip){
+			var sum = 0;
+			for(var i=0; i<tip.length; i++){
+				sum += tip[i];
+			}
+			return sum/tip.length;
+		}
+		console.log(avg1(family1.tipMoney));
+
+		var name = 'Jhon';
+		function first(){
+			var a = 'hello';
+			console.log(second());
+			var x = a + name;
+			return x;
+			
+		}
+		function second(){
+			var b = 'hi';
+			console.log(third());
+			var y = b + name;
+			return y;
+		}
+		function third(){
+			var c = 'hey';
+			var z = c + name;
+			return z;
+		}
+		console.log(first());
+
+		console.log(age);
+		var age = 23;
+
+		foo();
+		function foo(){
+			var age = 25;
+			console.log(age);
+		}
+		
+		console.log(age);
+
+
+	</script>
+</body>
+</html>

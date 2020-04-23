@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="Ninja_Quiz">
+		<h2>Ninja Quiz</h2>
+	</div>
+	<div class="Quest">
+		<h4>Question 1</h4>
+		<form action="">
+			<input type="radio" class="ans1-cat" name="1">cat
+			<input type="radio" class="ans1-dog" name="1">dog
+		</form>
+		<h4>Question 2</h4>
+		<form action="">
+			<input type="radio" class="ans2-cat" name="2">cat
+			<input type="radio" class="ans2-dog" name="2">dog
+		</form>
+		<h4>Question 3</h4>
+		<form action="">
+			<input type="radio" class="ans3-cat" name="3">cat
+			<input type="radio" class="ans3-dog" name="3">dog
+		</form>
+		<h4>Question 4</h4>
+		<form action="">
+			<input type="radio" class="ans4-cat" name="4">cat
+			<input type="radio" class="ans4-dog" name="4">dog
+		</form>
+		<form action="">
+			<input type="submit" class="submitted">
+		</form>
+	</div>
+	<script>
+var score=0;
+var score1,score2,score3,score4=0;
+
+document.querySelector('.ans1-cat').addEventListener('click',function(){
+	score1=0;
+});
+document.querySelector('.ans1-dog').addEventListener('click',function(){
+	score1=25;
+	score=score+score1;
+});
+
+document.querySelector('.ans2-cat').addEventListener('click',function(){
+	score2=0;
+});
+document.querySelector('.ans2-dog').addEventListener('click',function(){
+	score2=25;
+	score=score+score2;
+});
+
+document.querySelector('.ans3-cat').addEventListener('click',function(){
+	score3=0;
+});
+document.querySelector('.ans3-dog').addEventListener('click',function(){
+	score3=25;
+	score=score+score3;
+});
+
+document.querySelector('.ans4-cat').addEventListener('click',function(){
+	score4=0;
+});
+document.querySelector('.ans4-dog').addEventListener('click',function(){
+	score4=25;
+	score=score+score4;
+});
+
+document.querySelector('.submitted').addEventListener('click',function(){
+	alert('Your score is '+score+'%');
+});
+	</script>
+</body>
+</html>

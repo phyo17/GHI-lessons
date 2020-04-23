@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Object Lessons</title>
+</head>
+<body>
+	<h1>Hello Object</h1>
+	<script>
+		var mgmg1={
+			name:'mgmg',
+			age:20,
+			job:'engineer'
+		}
+		console.log(mgmg1);
+		var agag1={
+			name:'agag',
+			age:25,
+			job:'doctor'
+		}
+		console.log(agag1);
+		var hlahla1={
+			name:'hlahla',
+			age:30,
+			job:'developer'
+		}
+		console.log(hlahla1);
+
+		function Person(name,age,job){
+			this.name=name;
+			this.age=age;
+			this.job=job;
+		}
+		var mgmg=new Person('mgmg',20,'engineer');
+		var agag=new Person('agag',25,'designer');
+		var hlahla=new Person('hlahla',30,'developer');
+		console.log(mgmg);
+		console.log(agag);
+		console.log(hlahla);
+		
+	</script>
+</body>
+</html>

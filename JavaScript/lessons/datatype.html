@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QWERTY</title>
+</head>
+<body>
+	<script>
+		var fullName = "mgmg";
+		var age = 20;
+		var isMarried = false;
+		var locate;
+		var workExperinced = null;
+		console.log (fullName, age, isMarried, locate, workExperinced);
+		console.log(fullName + ' is ' + age +' years old');
+		console.log(fullName + ' is ' + age +' years old and location is ' + locate + ' and work experinced is ' + workExperinced  + '. Is married? ' + isMarried);
+		alert(fullName + ' is ' + age +' years old and location is ' + locate + ' and work experinced is ' + workExperinced  + '. Is married? ' + isMarried);
+		prompt('yes or no');
+
+		var now, agageAge, mgmgAge;
+		now = 2020;
+		agagAge = 2020 - 2000;
+		mgmgAge = 2020 - 2003;
+		console.log(agagAge,mgmgAge);
+		console.log(typeof fullName, typeof age, typeof ismarried, typeof locate, typeof workExperinced);
+		
+
+
+		var now = 2020;
+		var dateOfBirth = 1995;
+		var fullAge = 17;
+		var isFullAge = now-dateOfBirth >= fullAge;
+		console.log(isFullAge);
+		var mgmgAge=now-dateOfBirth;
+		var agagAge=26;
+		var totalAge=mgmgAge+agagAge/2;
+		var totalAge1=(mgmgAge+agagAge)/2;
+		console.log(totalAge);
+		console.log(totalAge1);
+
+		
+
+		var x,y;
+		x=y=(3+5)*4-6;
+		console.log(x,y);
+		x*=2;
+		console.log(x);
+		x+=2;
+		console.log(x);
+		x-=2;
+		console.log(x);
+		x/=2;
+		console.log(x);
+		x++;
+		console.log(x);
+		x--;
+		console.log(x);
+
+		
+
+		var mgmgMass=78;
+		var mgmgHeight=1.69;
+		var mgmgBmi = mgmgMass/mgmgHeight*2;
+		console.log(mgmgBmi);
+		var agagMass=92;
+		var agagHeight=1.95;
+		var agagBmi = agagMass/agagHeight*2;
+		console.log(agagBmi);
+		console.log(mgmgBmi>agagBmi);
+		
+				
+
+		var num=10-8+2;
+		console.log(num);
+
+
+
+		var personName = "Chris Evans";
+		var age=25;
+			if(age===13){
+				console.log(personName+' is a boy');
+			}else if(age>13 && age<21){
+				console.log(personName+' is a teenager');
+			}else if(age>20 && age<31){
+				console.log(personName+' is a young man'); 
+			}else if(age>30){
+				console.log(personName+' is a man');
+			}
+
+		var personAge=20;
+		personAge<18 ? console.log('juice'):console.log('Alcohol');
+		var result=personAge>18 ? 'juice':'Alcohol';
+		console.log(result);
+
+		var applience = "Tom";
+		var job = "instructor";
+		if(job=="teacher"){
+			console.log(applience + ' is a good teacher');
+		}else if(job=="doctor"){
+			console.log(applience + ' is a good doctor');
+		}else if(job=="designer"){
+			console.log(applience + ' is a good designer');
+		}else if(job=="gamer"){
+			console.log(applience + ' is a noob');
+		}else if(job=="developer"){
+			console.log(applience + ' is a good developer');
+		}else{
+			console.log(applience + ' is a retard');
+		}
+
+		switch(job){
+			case "teacher":
+			case "instructor":
+				console.log(applience + ' is a good teacher');
+				break;
+			case "doctor":
+				console.log(applience + ' is a good doctor');
+				break;
+			case "designer":
+				console.log(applience + ' is a good designer');
+				break;
+			case "gamer":
+				console.log(applience + ' is a good gamer');
+				break;
+			case "developer":
+				console.log(applience + ' is a good developer');
+				break;
+			default:
+				console.log(applience + ' is a retard');
+				break;
+		}
+
+
+		var newAge=16;
+		switch (true) {
+			case newAge<16:
+				console.log('boy');
+				break;
+			case newAge>=16 && newAge<20:
+				console.log('teenager');
+				break;
+			case newAge>=20 && newAge<30:
+				console.log('young man');
+				break;
+			case newAge>=30:
+				console.log('man');
+				break;		
+			default:
+				console.log('Something Else');
+				break;
+		}
+	</script>
+</body>
+</html>
+
+
+

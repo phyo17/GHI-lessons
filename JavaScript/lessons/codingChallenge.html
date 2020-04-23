@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		(function(){
+			function Question(question,answer,correct){
+				this.question=question;
+				this.answer=answer;
+				this.correct=correct;
+			}
+			Question.prototype.displayQuestion=function(){
+				console.log(this.question);
+				for(var i=0;i<this.answer.length;i++){
+					console.log( i +' : '+this.answer[i]);
+				}
+			}
+			var q1=new Question('Is JavaScript the coolest programming language in the world?',['yes','no'],0);
+			var q2=new Question('What is the name of this course\'s teacher?',['mgmg','agag','koko'],0);
+			var q3=new Question('What does best describe coding?', ['Boring','Hard','Fun','Tediuos'],2);
+			var questions=[q1,q2,q3];
+			var n=Math.floor(Math.random()*questions.length);
+			questions[n].displayQuestion();
+
+			var answer =parseInt(prompt('Please Select The Correct Answer'));
+
+			
+			Question.prototype.checkAnswer = function(ans){
+				if(ans === this.correct){
+					console.log('Correct Answer');
+				}else{
+					console.log('Wrong Answer.Try Again :)');
+				}
+			}
+			questions[n].checkAnswer(answer);
+		})();
+	</script>
+</body>
+</html>

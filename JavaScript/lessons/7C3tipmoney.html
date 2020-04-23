@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function calculateTip(bill){
+			var percentage;
+			if(bill==50000){
+				percentage = 0.2;
+			}else if(bill>50000 && bill<100000){
+				percentage = 0.15;
+			}else if(bill<120000){
+				percentage = 0.1;
+			}
+			return bill*percentage;
+		}
+		var bill = [35000,70000,120000];
+		console.log(bill);
+		var tipMoney = [calculateTip(bill[0]),calculateTip(bill[1]),calculateTip(bill[2])];
+		console.log(tipMoney);
+		var cost = [bill[0]+tipMoney[0],bill[1]+tipMoney[1],bill[2]+tipMoney[3]];
+		console.log(cost);
+	</script>
+</body>
+</html>

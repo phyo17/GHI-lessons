@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Object</title>
+</head>
+<body>
+	<script>
+		var Person=function(name,dateOfBirth,job){
+			this.name=name;
+			this.dateOfBirth=dateOfBirth;
+			this.job=job;
+			// this.calcAge=function(){
+			// 	return 2020-this.dateOfBirth;
+			// }
+		}
+
+		Person.prototype.sentence='welcome from ghi';
+		Person.prototype.calcAge=function(){
+				return 2020-this.dateOfBirth;
+			}
+		Person.prototype.checkAge=function(){
+			this.age=this.calcAge();
+			if(this.age>=18){
+				return 'full-age';
+			}else{
+				return 'not-full-age';
+			}
+		}
+		var mgmg=new Person('mgmg',1995,'developer');
+		console.log(mgmg);
+		console.log(mgmg.calcAge());
+		console.log(mgmg.checkAge());
+		console.log(mgmg.sentence);
+
+		//Developer Testing
+		console.log(mgmg.__proto__==Person.prototype);
+		console.log(mgmg instanceof Person);
+		console.log(mgmg.hasOwnProperty('job'));//own property
+		console.log(mgmg.hasOwnProperty('age'));//prototype property
+		console.log(mgmg.hasOwnProperty('sth'));//no property
+
+		//array prototype
+		var x=new Array(1,2,3,4,5);
+		console.log(x);
+		console.info(x);
+	</script>
+</body>
+</html>

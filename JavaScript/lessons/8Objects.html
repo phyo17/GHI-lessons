@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// var Obj = {
+		// 	name : 'mgmg',
+		// 	dateOfBirth : 2000,
+		// 	address : 'Yangon',
+		// 	calculateAge : function (){
+		// 		return 2020-this.dateOfBirth;
+		// 	}
+		// };
+		// console.log(Obj);
+		// console.log(Obj.name,Obj['name']);
+		// console.log(Obj.dateOfBirth,Obj['dateOfBirth']);
+		// console.log(Obj.address,Obj['address']);
+		// console.log(Obj.calculateAge());
+		// Obj.isMarried = false;
+		// console.log(Obj);
+		// Obj.name='aung aung';
+		// console.log(Obj);
+		// // var Obj2 = new Object();
+		
+		// var Obj2 = new Object({
+		// 	name : 'Chris',
+		// 	dateOfBirth : 2003,
+		// 	address : 'Yangon',
+		// 	score:{
+		// 		score1 : 50,
+		// 		score2 :100
+		// 	},
+		// 	calculateAge : function (){
+		// 		return 2020 - this.dateOfbirth;
+		// 	}
+		// });
+
+		// console.log(Obj2);
+		// console.log(Obj2.name, Obj2['name']);
+		// console.log(Obj2.dateOfbirth, Obj2['dateOfbirth']);
+		// console.log(Obj2.address, Obj2['address']);
+		// console.log(Obj.calculateAge());
+		// Obj2.isMarried=false;
+		// console.log(Obj2);
+		// Obj2.name='John';
+		// console.log(Obj2);
+		// Obj2['institute']='Greenhackers Institute';
+		// console.log(obj2);
+		// console.log(ovj2.score.score1);
+		// console.log(obj2['score']['score2']);
+		// console.log(obj2);
+		// console.log(obj2.arr[0]);
+
+		var mgmg = {
+			fullName : 'mgmg',
+			mgmgmass : 92,
+			mgmgheight : 1.95,
+			calculateBMI : function(){
+				this.bmi = this.mgmgmass/(this.mgmgheight*this.mgmgheight);
+				return this.bmi;
+			}
+		};
+		 console.log(mgmg.calculateBMI());
+		var aungaung = new Object({
+			fullName : 'aungaung',
+			aungaungmass : 78,
+			aungaungheight : 1.69,
+			calculateBMI : function(){
+				this.bmi = this.aungaungmass/(this.aungaungheight*this.aungaungheight);
+				return this.bmi;
+			}
+		});
+		console.log(aungaung.calculateBMI());
+		// mgmg.bmi = mgmg.calculateBMI();
+		// aungaung.bmi = aungaung.calculateBMI();
+		// console.log(mgmg);
+		// console.log(aungaung);
+
+		if(mgmg.calculateBMI() > aungaung.calculateBMI()){
+			console.log('Mg Mg is '+mgmg.bmi+'and greater than Aung Aung');
+		}else if(mgmg.bmi < aungaung.bmi){
+			console.log('Aung Aung is '+aungaung.bmi+'and greater than Mg Mg');
+		}else{
+			console.log('They have same bmi');	
+		}
+		var arr1 = [];
+		for(var i=0; i<4; i++){
+			arr1[i]=i+8;
+			console.log(arr1[i]);
+		}
+	</script>
+</body>
+</html>

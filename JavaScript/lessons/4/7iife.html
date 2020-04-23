@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// function score(){
+		// 	let score=Math.round(Math.random()*9)+1;
+		// 	console.log(score);
+		// 	if(score>=5){
+		// 		console.log("Winner!");
+		// 	}else{
+		// 		console.log("Fail!");
+		// 	}
+		// }
+		// score();
+		
+		// Syntax of iife------
+		//  	(function(){
+		// 			})();
+		
+
+		(function(name){
+			let score=Math.round(Math.random()*9)+1;
+			console.log(score);
+			if(score>=5){
+				console.log(name+" is Winner!");
+			}else{
+				console.log(name+" is Fail!");
+			}
+		})('Mg Mg');
+	</script>
+</body>
+</html>

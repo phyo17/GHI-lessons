@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Object Lessons</title>
+</head>
+<body>
+	<script>
+		function Person(name,age,job){
+			this.name=name;
+			this.age=age;
+			this.job=job;
+			this.checkAge=function(){
+				if(this.age>=18){
+					return 'full age';
+				}else{
+					return 'not full age';
+				}
+			}
+		}
+		Person.prototype.desc="good person";
+		var mgmg=new Person('mgmg',18,'Engineer');
+		console.log(mgmg);
+		console.log(mgmg.name,mgmg.age,mgmg.job,mgmg.checkAge());
+		console.log(mgmg.desc)
+
+		function Athlete(name,age,job,hello,hi,hey){
+			//Inheritance
+			Person.call(this,name,age,job);
+			this.name=name;
+			this.age=age;
+			this.job=job;
+			this.hello=hello;
+			this.hi=hi;
+			this.hey=hey;
+		}
+		//prototype inheritance
+		Athlete.prototype=Object.create(Person.prototype);
+		var ath=new Athlete('koko',20,'swimming','from','green','hackers');
+
+		console.log(ath);
+		console.log(ath.name,ath.age,ath.job,ath.checkAge(),ath.hello,ath.hi,ath.hey);
+		console.log(ath.desc);
+	</script>
+</body>
+</html>
